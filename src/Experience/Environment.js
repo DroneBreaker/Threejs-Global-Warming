@@ -29,7 +29,7 @@ export default class Environment {
         
 
         // Set position of the light
-        ambientLight.position.set(10, 10, 10)
+        ambientLight.position.set(-10, -10, -10)
 
         //Add to scene
         this.scene.add(ambientLight)

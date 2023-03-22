@@ -8,6 +8,7 @@ export default class Renderer {
         this.camera = this.experience.camera;
         this.canvas = this.experience.canvas
         this.sizes = this.experience.sizes
+        // document.body.appendChild(this.renderer.domElement)
 
 
         this.setRenderer();

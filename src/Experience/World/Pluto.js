@@ -2,11 +2,10 @@ import Experience from "../Experience";
 import * as THREE from 'three'
 
 
-export default class Earth {
+export default class Pluto {
     constructor() {
         this.experience = new Experience()
         this.scene = this.experience.scene
-        this.time = this.experience.time
 
         
         // Add a geometry
@@ -14,22 +13,21 @@ export default class Earth {
 
         // Add a material
         const material = new THREE.MeshStandardMaterial({
-            map: new THREE.TextureLoader().load('/earth_day.jpg')
+            map: new THREE.TextureLoader().load('/pluto_texture.jpg')
         })
 
         // Add geometry and material to mesh
-        const earth = new THREE.Mesh(geometry, material)
-        earth.position.set(4, 0, 0)
-
-        // Update Function
-        this.update = function update() {
-            earth.rotation.x += 0.002
-            earth.rotation.y += 0.002
-            earth.rotation.z += 0.002
-        }
-       
+        const pluto = new THREE.Mesh(geometry, material)
+        pluto.position.set(-4, 2, 20)
         
-        // Add to scene
-        this.scene.add(earth)
+        
+        // Update function to handle animations
+        this.update = function update() {
+            pluto.rotation.x += 0.002
+            pluto.rotation.y += 0.002
+            pluto.rotation.z += 0.002
+        }
+         // Add to scene
+        this.scene.add(pluto)
     }
 }
